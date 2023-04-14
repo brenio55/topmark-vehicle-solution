@@ -16,8 +16,8 @@
             <ul>
                 <li>WELCOME</li>
                 <li>SERVICES</li>
-                <li>Showroom</li>
-                <li>About Us</li>
+                <li>SHOWROOM</li>
+                <li>ABOUT US</li>
             </ul>
         </nav>
         <div class="conta">
@@ -50,10 +50,10 @@
                 <ul>
                     <li>WELCOME</li>
                     <li>SERVICES</li>
-                    <li>Showroom</li>
-                    <li>About Us</li>
+                    <li>SHOWROOM</li>
+                    <li>ABOUT US</li>
                 </ul>
-            </nav>'
+            </nav>
     </footer>
 </body>
 </html>

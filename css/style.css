@@ -1,0 +1,26 @@
+* {
+  box-sizing: border-box;
+}
+
+span {
+  display: block;
+}
+
+body {
+  margin: 0;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  height: 120px;
+  color: white;
+  background-color: blue;
+  align-items: center;
+  margin: 0;
+}
+header > * {
+  margin: 0;
+  padding: 0;
+}

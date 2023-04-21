@@ -1,6 +1,6 @@
 @font-face {
   font-family: Karla;
-  src: url("fonts/karla_variable.ttf");
+  /* src: url("fonts/karla_variable.ttf"); */
 }
 * {
   box-sizing: border-box;

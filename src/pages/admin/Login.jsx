@@ -4,8 +4,9 @@ import axios from 'axios';
 function Login(){
     function requestLoginAPI(event){
         event.preventDefault()
-        axios.post('api/iniciarSessionAPI.php')
-        
+
+        axios.defaults.headers.post['Content-Type'] = 'application/json';
+        axios.post('http://localhost/1A_%20freelancers/chrissyboy/api/iniciarSessionAPI.php', {user: user, password: password})
         .then(response => {
             console.log(response.data)
         })
@@ -16,6 +17,7 @@ function Login(){
 
     const [user, setUser] = useState("");
     const [password, setPassword] = useState("");
+    
 
     return (
         <div>

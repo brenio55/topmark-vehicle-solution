@@ -5,8 +5,8 @@ function Header(){
     return (
         <div>
             <header>
-                <div class="logo">
-                    <img src={logo} alt="logo" class="logo"/>
+                <div className="logo">
+                    <img src={logo} alt="logo" className="logo"/>
                     <h1>TOPMARK VEHICLE SOLUTIONS</h1>
                     
                 </div>    
@@ -18,17 +18,8 @@ function Header(){
                         <li>ABOUT US</li>
                     </ul>
                 </nav>
-                <div class="conta">
-                    {/* <?php 
-                        if (isset($_SESSION)){
-                            echo "
-                                sessão iniciada.
-                            ";
-                        }else{
-                            echo "<span>Login</span>";
-                            echo "<span>Sign up</span>";
-                        }
-                    ?> */}
+                <div className="conta">
+                    <h4><a href="/admin">Login</a></h4>
                 </div>
         </header>
         </div>

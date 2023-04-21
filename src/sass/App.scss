@@ -58,3 +58,102 @@ header{
         }
     }
 }
+
+/////////
+/// 
+/// LOGIN PAGE
+/// 
+/// 
+////////
+
+.telaCompleta{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e2e2e5;
+}
+
+.quadradoLogin{
+    display: flex;
+    min-height: 130px;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    // outline: 1px solid black;
+    padding: 50px;
+    font-family: sans-serif;
+
+
+    .L{
+        display: block;
+        background-color: white;
+        padding: 15px;
+        padding-left: 35px;
+        min-height: 220px;
+
+        h1{
+            margin-bottom: 55px;
+        }
+        p{
+            color: #7c7c7c;
+        }
+    }
+    .R{
+        $textColorWhite: #c2c2c5;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: #474A59;
+        color: $textColorWhite;
+        min-height: 260px;
+        box-shadow: 0px 0px 40px 16px rgba(0,0,0,0.22);
+        padding: 30px;
+
+        label{
+            font-size: 14px;
+        }
+
+        input{
+            background-color: unset;
+            border: none;
+            border-bottom: 1px solid rgb(0, 132, 255);
+            height: 20px;
+            margin-bottom: 15px;
+            color: white;
+
+
+            &:focus{
+                background-color: unset;
+                outline: unset;
+                color: white;
+                transition: 1.4s all;
+                border-bottom: 1px solid rgb(0, 153, 255);
+            }
+
+            
+        }
+
+        button{            
+            background-color: unset;
+            border: unset;
+            margin: 0 auto;
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: $textColorWhite;
+            border: 1px solid rgb(99, 99, 224);
+            
+            $paddingLR: 20px;
+            $paddingTB: 10px; 
+            padding-top: $paddingTB;
+            padding-bottom: $paddingTB;
+            padding-left: $paddingLR;            
+            padding-right: $paddingLR;
+        }
+    }
+}
+

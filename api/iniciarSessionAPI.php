@@ -23,8 +23,9 @@
     $query = $conn->prepare("SELECT * FROM users WHERE usuario=:usuario AND senha=:senha");
     $query->bindParam(':usuario', $user);
     $query->bindParam(':senha', $password);
+    $query->execute();
 
-    $result = $query->fetch(PDO::FETCH_ASSOC);
+    $result = $query->fetchAll(PDO::FETCH_ASSOC);
 
     http_response_code(200);
         

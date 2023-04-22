@@ -157,3 +157,63 @@ header{
     }
 }
 
+/////////////////////
+/// 
+/// BANNER
+/// 
+/////////////////////
+
+.flex{
+    display: flex;
+
+    &.column{
+        flex-direction: column;
+    }
+}
+
+.blackFrame{
+    position: relative;
+    width: 100%;
+    height: 720px; 
+
+    
+        .bmwVideo{
+            filter: brightness(0.6);
+            width: 100%;
+            height: 720px;
+            margin: 0;
+            position: absolute;
+            z-index: -1;
+        }
+
+        .titles{
+            filter: brightness(1);
+            position: absolute;
+            color: white;
+            font-size: 25px;
+            background-color: rgba($color: #000000, $alpha: 1.0);
+            top: 50%;
+            transform: translateY(-50%);
+            min-height: 230px;
+
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            align-items: center;
+            
+            h1{
+                margin: 0px auto;
+            }
+            .L{
+                .theTop{
+                    align-items: center;
+                    // position: relative;
+                    // left: 10%;
+                    text-align: left;
+                    // top: 277px;
+                    
+                }
+            }
+            
+        }
+}

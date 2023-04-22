@@ -1,7 +1,10 @@
 import { useState } from "react"
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
 function Login(){
+    const navigate = useNavigate(); // <-- get history from hook
+
     function requestLoginAPI(event){
         event.preventDefault()
 
@@ -9,6 +12,11 @@ function Login(){
         axios.post('http://localhost/1A_%20freelancers/chrissyboy/api/iniciarSessionAPI.php', {user: user, password: password})
         .then(response => {
             console.log(response.data)
+
+            if(response.data["acesso"]=='concedido'){
+                navigate("/dashboard");                
+            }
+
         })
         .catch(response => {
             console.log(response.error);

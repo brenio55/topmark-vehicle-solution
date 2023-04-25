@@ -4,6 +4,7 @@ import axios from 'axios';
 
 function Login(){
     const navigate = useNavigate(); // <-- get history from hook
+    let Acesso
 
     function requestLoginAPI(event){
         event.preventDefault()
@@ -14,7 +15,10 @@ function Login(){
             console.log(response.data)
 
             if(response.data["acesso"]=='concedido'){
+                Acesso = 1
                 navigate("/dashboard");                
+            }else{
+                Acesso = 0
             }
 
         })
@@ -44,6 +48,7 @@ function Login(){
                             <input type="password"  name="password" value={password} onChange={(e)=>{setPassword(e.target.value) }} />
                             <br />
                             <button type="submit">Enviar</button>
+                            
                         </form>
                     </div>
                 </div>

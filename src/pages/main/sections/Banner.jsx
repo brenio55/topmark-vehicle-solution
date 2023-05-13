@@ -3,17 +3,18 @@ function Banner(){
         <div>
             <div className="blackFrame">
                 <div className="titles">
-                    <div className="flex column">
-                        <div className="L">
-                            <h1 className="theTop">THE TOPMARK</h1>
-                            <h1 className="theTop">THE TOP VEHICLES</h1>
-                        </div>
+                    <h1>WELCOME TO TOPMARK.</h1>
+                    <span className="welcomeLine"></span>
+                    <div className="marks">
+                        <img src="/src/img/marks/mercedes.png" alt="" className="mercedes mark" />
+                        <img src="/src/img/marks/audi.png" alt="" className="audi mark" />
+                        <img src="/src/img/marks/bmw.png" alt="" className="bmw mark" />
+                        <img src="/src/img/marks/porsche.png" alt="" className="porsche mark" />
+                        <img src="/src/img/marks/landRover.png" alt="" className="landRover mark" />
                     </div>
-                </div>                
-                <video className="bmwVideo" loop muted autoPlay>
-                    <source src="src\assets\videos\bmwBanner.mp4" type="video/mp4"/>
-                </video>
+                </div>
             </div>
+            <img alt="" src="/src/img/sfx/setaWelcomeShowroom.png" className="setaWelcomeShowroom" />
         </div>
     )
 }

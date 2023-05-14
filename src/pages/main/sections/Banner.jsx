@@ -13,7 +13,9 @@ function Banner(){
                         <img src="/src/img/marks/landRover.png" alt="" className="landRover mark" />
                     </div>
                 </div>
+                
             </div>
+            <button className="viewShowroom">VIEW SHOWROOM</button>
             <img alt="" src="/src/img/sfx/setaWelcomeShowroom.png" className="setaWelcomeShowroom" />
         </div>
     )

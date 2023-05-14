@@ -62,6 +62,11 @@ header nav ul {
 
 .mark {
   height: 51.32px;
+  transition: all 0.2s;
+}
+.mark:hover {
+  transform: scale(1.2);
+  transition: all 0.2s;
 }
 
 .flex {
@@ -75,10 +80,18 @@ header nav ul {
   position: relative;
   width: 100%;
   height: 870px;
+  top: -140px;
+}
+.blackFrame::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background-image: url("/src/img/background/backgroundWelcome.png");
   background-repeat: no-repeat;
   background-size: 104%;
-  top: -140px;
   z-index: -1;
 }
 .blackFrame .titles {
@@ -190,6 +203,32 @@ header nav ul {
   padding-right: 20px;
 }
 
+button.viewShowroom {
+  display: block;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 37%;
+  background: rgba(0, 0, 0, 0.49);
+  border: 1px solid rgba(236, 229, 240, 0.33);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 16px;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 29px;
+  /* identical to box height */
+  text-align: center;
+  color: #CCCCCC;
+  padding: 8px 15px;
+  transition: all 0.3s;
+}
+button.viewShowroom:hover {
+  color: #eaeaea;
+  background: rgba(0, 0, 0, 0.8);
+  transition: all 0.3s;
+}
+
 .setaWelcomeShowroom {
   position: absolute;
   display: block;
@@ -197,4 +236,5 @@ header nav ul {
   bottom: 10px;
   left: 50%;
   transform: translateX(-50%);
+  z-index: -1;
 }

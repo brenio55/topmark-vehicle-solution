@@ -15,6 +15,7 @@ img {
 
 html {
   background-color: #02112D;
+  color: white;
 }
 
 body {
@@ -97,7 +98,6 @@ header nav ul {
 .blackFrame .titles {
   filter: brightness(1);
   position: absolute;
-  color: white;
   font-size: 25px;
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.43) 28.13%, rgba(0, 0, 0, 0.388049) 72.92%, rgba(0, 0, 0, 0) 100%);
   mix-blend-mode: normal;
@@ -125,6 +125,27 @@ header nav ul {
 .blackFrame .titles .marks {
   display: flex;
   gap: 20px;
+}
+
+.spliceSlide {
+  margin: auto 10px;
+}
+
+.carSquare {
+  width: 550px;
+  margin: auto 10px;
+  background: rgba(16, 16, 18, 0.81);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+.carSquare .carImg {
+  width: 500px;
+  height: 268px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .telaCompleta {
@@ -233,7 +254,7 @@ button.viewShowroom:hover {
   position: absolute;
   display: block;
   height: 360px;
-  bottom: 10px;
+  bottom: -70px;
   left: 50%;
   transform: translateX(-50%);
   z-index: -1;

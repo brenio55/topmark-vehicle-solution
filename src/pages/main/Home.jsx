@@ -1,4 +1,5 @@
 import Header from "../../components/Header";
+import AboutUs from "./sections/AboutUs";
 import Banner from "./sections/Banner";
 import CurrentStock from "./sections/CurrentStock";
 
@@ -8,6 +9,7 @@ function Home(){
             <Header></Header>
             <Banner></Banner>
             <CurrentStock></CurrentStock>
+            <AboutUs></AboutUs>
         </div>
     )
 }

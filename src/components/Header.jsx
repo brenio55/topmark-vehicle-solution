@@ -1,11 +1,14 @@
 
 
-function Header(){
+function Header({onLandingPage}){
     const logo = "./src/img/logo/logoNoBackground.png";
+
+    let WelcomeLink = onLandingPage ? '#' : '/';
+
     return (
         <>
             <header id="#">
-                <a href="/">
+                <a href={WelcomeLink}>
                 <div className="logo">
                     <img src={logo} alt="logo" className="logo"/>
                     <h1>TOPMARK VEHICLE SOLUTIONS</h1>
@@ -13,7 +16,8 @@ function Header(){
                 </a>
                 <nav>
                     <ul>
-                        <li><a href="#">WELCOME</a></li>
+                        <li><a href={WelcomeLink}>    
+                        WELCOME</a></li>
                         <li><a href="/showroom">SHOWROOM</a></li>
                         <li><a href="#aboutUs">ABOUT US</a></li>
                     </ul>

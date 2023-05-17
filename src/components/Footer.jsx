@@ -2,8 +2,8 @@ function Footer(){
     return (
         <>
         <footer>
-            <div class="logo">
-                    <img src="" alt="logo" class="logo" />
+            <div className="logo">
+                    <img src="" alt="logo" className="logo" />
                 </div>    
                 <nav>
                     <ul>

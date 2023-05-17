@@ -10,7 +10,7 @@ function CurrentStock(){
     return (
         <>
            <section className="currentStockDIV">
-                <h2>CURRENT STOCK</h2>
+                <h2 className='titleDefault'>CURRENT STOCK</h2>
 
                 <span className='line'></span>
                 <span className='line'></span>

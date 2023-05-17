@@ -5,11 +5,12 @@ function Header(){
     return (
         <>
             <header>
+                <a href="/">
                 <div className="logo">
                     <img src={logo} alt="logo" className="logo"/>
                     <h1>TOPMARK VEHICLE SOLUTIONS</h1>
-                    
                 </div>    
+                </a>
                 <nav>
                     <ul>
                         <li>WELCOME</li>

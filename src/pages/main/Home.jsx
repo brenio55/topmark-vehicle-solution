@@ -1,16 +1,23 @@
 import Header from "../../components/Header";
+import Footer from "../../components/Footer"
+
 import AboutUs from "./sections/AboutUs";
 import Banner from "./sections/Banner";
 import CurrentStock from "./sections/CurrentStock";
+import Contact from "./sections/Contact";
 
 function Home(){
     return (
-        <div>
+        <>
             <Header></Header>
-            <Banner></Banner>
-            <CurrentStock></CurrentStock>
-            <AboutUs></AboutUs>
-        </div>
+            <main>
+                <Banner></Banner>
+                <CurrentStock></CurrentStock>
+                <AboutUs></AboutUs>
+                <Contact></Contact>
+            </main>
+            <Footer></Footer>
+        </>
     )
 }
 

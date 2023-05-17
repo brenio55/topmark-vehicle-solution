@@ -79,6 +79,39 @@ header{
     }
 }
 
+button.buttonDefault{
+    display: block;
+
+    background: rgba(0, 0, 0, 0.49);
+    border: 1px solid rgba(236, 229, 240, 0.33);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 16px;
+
+    font-style: normal;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 29px;
+    /* identical to box height */
+    text-align: center;
+
+    color: #CCCCCC;
+    $paddingTB: 8px;
+    $paddingLR: 15px;
+
+    padding: $paddingTB $paddingLR;
+    $transition: 0.3s;
+    transition: all $transition;
+
+    &:hover{
+        color: #eaeaea;
+        background: rgba(0, 0, 0, 0.80);
+        transition: all ($transition - 0.125);
+        cursor: pointer;
+        padding: ($paddingTB + 2) ($paddingLR + 2);
+    }
+}
+
+
 .mark{
     height: 51.32px;
 
@@ -92,14 +125,6 @@ header{
     }
 }
 
-
-
-/////////////////////
-/// 
-/// BANNER
-/// 
-/////////////////////
-
 .flex{
     display: flex;
 
@@ -108,7 +133,13 @@ header{
     }
 }
 
-.blackFrame{
+
+/////////////////////
+/// 
+/// BANNER
+/// 
+/////////////////////
+section.blackFrame{
     position: relative;
     width: 100%;
     height: 870px; 
@@ -170,28 +201,82 @@ mix-blend-mode: normal;
 /// 
 /// 
 ////////
+section.currentStockDIV{
+    position: relative;
+    min-height: 870px;
 
-.spliceSlide{
-    margin: auto 10px;
-}
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.08) 0%, rgba(0, 0, 0, 0) 60.42%, rgb(105 156 232 / 2%) 94.27%);
+    background-blend-mode: exclusion;
+    backdrop-filter: blur(80px);
+    overflow: clip;
+    padding-top: 130px;
+    margin-top: -141px;
 
-.carSquare{
-    width: 550px;
-    margin: auto 10px;
-    background: rgba(16, 16, 18, 0.81);
-    border-radius: 12px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
+    .line{
+        display: block;
+        position: absolute;
+        width: 2px;
+        height: 2599px;
+        background-color: white;
+        z-index: -2;
+        right: 1008px;
+        top: -716px;
+        transform: rotate(49deg);
 
+        &:nth-child(2){
+            transform: rotate(60deg);
+        }
+    }
 
-    .carImg{
-        width: 500px;
-        height: 268px;
-        object-fit: cover;
+    h2:first-child{
+        text-align: center;
+        font-size: 58px;
+        margin-top: -27px;
+        position: relative;
+
+        &::before{
+            width: 100%;
+            z-index: -1;
+            display: block;
+            content: '';
+            height: 34px;
+            position: absolute;
+            background: radial-gradient(50% 50% at 50% 50%, rgba(26, 82, 166, 0.76) 0%, rgba(109, 7, 81, 0) 100%);
+            transform: translate(-50%, -50%);
+            top: 50%;
+            left: 50%;
+        }
+    }
+    .spliceSlide{
+        margin: auto 10px;
+    }
+    
+    .carSquare{
+        width: 550px;
+        margin: auto 10px;
+        background: rgba(16, 16, 18, 0.81);
+        border-radius: 12px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    
+    
+        .carImg{
+            width: 500px;
+            height: 268px;
+            object-fit: cover;
+        }
+    }
+    .exploreMore{
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%) scale(1.2);
+        bottom: 18%;
     }
 }
+
+
 
 /////////
 /// 
@@ -292,34 +377,10 @@ mix-blend-mode: normal;
 }
 
 button.viewShowroom{
-    display: block;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    bottom: 37%;
-
-    background: rgba(0, 0, 0, 0.49);
-    border: 1px solid rgba(236, 229, 240, 0.33);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 16px;
-
-    font-style: normal;
-    font-weight: 900;
-    font-size: 24px;
-    line-height: 29px;
-    /* identical to box height */
-    text-align: center;
-
-    color: #CCCCCC;
-    padding: 8px 15px;
-    $transition: all 0.3s;
-    transition: $transition;
-
-    &:hover{
-        color: #eaeaea;
-        background: rgba(0, 0, 0, 0.80);
-        transition: $transition;
-    }
+    bottom: 31%;
 }
 
 .setaWelcomeShowroom{
@@ -329,5 +390,5 @@ button.viewShowroom{
     bottom: -70px;
     left: 50%;
     transform: translateX(-50%);
-    z-index: -1;
+    z-index: 1;
 }

@@ -61,6 +61,30 @@ header nav ul {
   font-family: "Karla";
 }
 
+button.buttonDefault {
+  display: block;
+  background: rgba(0, 0, 0, 0.49);
+  border: 1px solid rgba(236, 229, 240, 0.33);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 16px;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 29px;
+  /* identical to box height */
+  text-align: center;
+  color: #CCCCCC;
+  padding: 8px 15px;
+  transition: all 0.3s;
+}
+button.buttonDefault:hover {
+  color: #eaeaea;
+  background: rgba(0, 0, 0, 0.8);
+  transition: all 0.175s;
+  cursor: pointer;
+  padding: 10px 17px;
+}
+
 .mark {
   height: 51.32px;
   transition: all 0.2s;
@@ -77,13 +101,13 @@ header nav ul {
   flex-direction: column;
 }
 
-.blackFrame {
+section.blackFrame {
   position: relative;
   width: 100%;
   height: 870px;
   top: -140px;
 }
-.blackFrame::before {
+section.blackFrame::before {
   content: "";
   position: absolute;
   top: 0;
@@ -95,7 +119,7 @@ header nav ul {
   background-size: 104%;
   z-index: -1;
 }
-.blackFrame .titles {
+section.blackFrame .titles {
   filter: brightness(1);
   position: absolute;
   font-size: 25px;
@@ -112,26 +136,68 @@ header nav ul {
   text-align: center;
   justify-content: space-evenly;
 }
-.blackFrame .titles h1 {
+section.blackFrame .titles h1 {
   width: 380px;
 }
-.blackFrame .titles .welcomeLine {
+section.blackFrame .titles .welcomeLine {
   display: block;
   width: 2px;
   height: 106px;
   background-color: #D9D9D9;
   position: absolute;
 }
-.blackFrame .titles .marks {
+section.blackFrame .titles .marks {
   display: flex;
   gap: 20px;
 }
 
-.spliceSlide {
+section.currentStockDIV {
+  position: relative;
+  min-height: 870px;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.08) 0%, rgba(0, 0, 0, 0) 60.42%, rgba(105, 156, 232, 0.02) 94.27%);
+  background-blend-mode: exclusion;
+  -webkit-backdrop-filter: blur(80px);
+          backdrop-filter: blur(80px);
+  overflow: clip;
+  padding-top: 130px;
+  margin-top: -141px;
+}
+section.currentStockDIV .line {
+  display: block;
+  position: absolute;
+  width: 2px;
+  height: 2599px;
+  background-color: white;
+  z-index: -2;
+  right: 1008px;
+  top: -716px;
+  transform: rotate(49deg);
+}
+section.currentStockDIV .line:nth-child(2) {
+  transform: rotate(60deg);
+}
+section.currentStockDIV h2:first-child {
+  text-align: center;
+  font-size: 58px;
+  margin-top: -27px;
+  position: relative;
+}
+section.currentStockDIV h2:first-child::before {
+  width: 100%;
+  z-index: -1;
+  display: block;
+  content: "";
+  height: 34px;
+  position: absolute;
+  background: radial-gradient(50% 50% at 50% 50%, rgba(26, 82, 166, 0.76) 0%, rgba(109, 7, 81, 0) 100%);
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+}
+section.currentStockDIV .spliceSlide {
   margin: auto 10px;
 }
-
-.carSquare {
+section.currentStockDIV .carSquare {
   width: 550px;
   margin: auto 10px;
   background: rgba(16, 16, 18, 0.81);
@@ -141,11 +207,17 @@ header nav ul {
   justify-content: center;
   text-align: center;
 }
-.carSquare .carImg {
+section.currentStockDIV .carSquare .carImg {
   width: 500px;
   height: 268px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+section.currentStockDIV .exploreMore {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) scale(1.2);
+  bottom: 18%;
 }
 
 .telaCompleta {
@@ -225,29 +297,10 @@ header nav ul {
 }
 
 button.viewShowroom {
-  display: block;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  bottom: 37%;
-  background: rgba(0, 0, 0, 0.49);
-  border: 1px solid rgba(236, 229, 240, 0.33);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 16px;
-  font-style: normal;
-  font-weight: 900;
-  font-size: 24px;
-  line-height: 29px;
-  /* identical to box height */
-  text-align: center;
-  color: #CCCCCC;
-  padding: 8px 15px;
-  transition: all 0.3s;
-}
-button.viewShowroom:hover {
-  color: #eaeaea;
-  background: rgba(0, 0, 0, 0.8);
-  transition: all 0.3s;
+  bottom: 31%;
 }
 
 .setaWelcomeShowroom {
@@ -257,5 +310,5 @@ button.viewShowroom:hover {
   bottom: -70px;
   left: 50%;
   transform: translateX(-50%);
-  z-index: -1;
+  z-index: 1;
 }

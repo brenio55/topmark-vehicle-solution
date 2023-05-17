@@ -32,7 +32,7 @@ function Login(){
     
 
     return (
-        <div>
+        <>
             <div className="telaCompleta">
                 <div className="quadradoLogin">
                     <div className="L">
@@ -53,7 +53,7 @@ function Login(){
                     </div>
                 </div>
             </div>
-        </div>
+        </>
     )
 }
 

@@ -1,7 +1,7 @@
 function Banner(){
     return (
-        <div>
-            <div className="blackFrame">
+        <>
+            <section className="blackFrame">
                 <div className="titles">
                     <h1>WELCOME TO TOPMARK.</h1>
                     <span className="welcomeLine"></span>
@@ -13,11 +13,10 @@ function Banner(){
                         <img src="/src/img/marks/landRover.png" alt="" className="landRover mark" />
                     </div>
                 </div>
-                
-            </div>
-            <button className="viewShowroom">VIEW SHOWROOM</button>
+            </section>
+            <button className="buttonDefault viewShowroom">VIEW SHOWROOM</button>
             <img alt="" src="/src/img/sfx/setaWelcomeShowroom.png" className="setaWelcomeShowroom" />
-        </div>
+        </>
     )
 }
 

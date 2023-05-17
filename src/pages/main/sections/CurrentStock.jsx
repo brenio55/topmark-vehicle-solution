@@ -8,9 +8,12 @@ import Car from './CurrentStock/Car';
 
 function CurrentStock(){
     return (
-        <div>
-           <div className="currentStockDIV">
+        <>
+           <section className="currentStockDIV">
                 <h2>CURRENT STOCK</h2>
+
+                <span className='line'></span>
+                <span className='line'></span>
 
                 <Splide aria-label="My Favorite Images"
                     options={{
@@ -50,10 +53,12 @@ function CurrentStock(){
                         />
                     </SplideSlide>
                 </Splide>
-           </div>
+
+                <button type='button' className="buttonDefault exploreMore">EXPLORE MORE</button>
+           </section>
 
            
-        </div>
+        </>
     )
 }
 

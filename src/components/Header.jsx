@@ -3,7 +3,7 @@
 function Header(){
     const logo = "./src/img/logo/logoNoBackground.png";
     return (
-        <div>
+        <>
             <header>
                 <div className="logo">
                     <img src={logo} alt="logo" className="logo"/>
@@ -21,7 +21,7 @@ function Header(){
                     <h4><a href="/admin">Login</a></h4>
                 </div>
         </header>
-        </div>
+        </>
     )
 }
 

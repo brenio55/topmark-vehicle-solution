@@ -24,6 +24,7 @@ img{
 html{
     background-color: #02112D;
     color: white;
+    scroll-behavior: smooth;
 }
 
 body{
@@ -44,6 +45,7 @@ div.logo{
 
 a{
     text-decoration: none;
+    color: unset;
 
     &:visited{
         color: unset;
@@ -62,7 +64,7 @@ header{
     background: linear-gradient(180deg, rgba(6, 7, 20, 0.72) 0%, rgba(21, 23, 70, 0) 112.5%);
     align-items: center;
     z-index: 2;
-    position: relative;
+    position: fixed;
 
     margin: 0;
 
@@ -172,7 +174,7 @@ section.blackFrame{
     width: 100%;
     height: 870px; 
     
-    top: -140px;
+    // top: -140px;
 
     &::before {
         content: "";
@@ -258,7 +260,7 @@ section.currentStockDIV{
     backdrop-filter: blur(80px);
     overflow: clip;
     padding-top: 130px;
-    margin-top: -141px;
+    // margin-top: -141px;
 
     .line{
         display: block;
@@ -323,16 +325,52 @@ section.AboutUs{
             background: radial-gradient(50% 50% at 50% 50%, #6D0751 0%, rgba(109, 7, 81, 0) 100%);
             z-index: -1;
         }   
+        margin-bottom: 96px;
     }
 
     .content{
-        justify-content: space-evenly;
+        text-align: center;
+        justify-content: center;
+        gap: 100px;
+
+        .L, .R{
+            width: 500px;    
+        }
+
+        .aboutUsImg{
+            width: 503px;
+            border-radius: 15px;
+        }
+        .weAreTopmark{
+            font-size: 50px;
+            text-align: center;
+            margin: 0;
+            margin-top: -14px;
+        }
+        p{
+            font-weight: 200;
+            letter-spacing: 0.6px;
+        }
+    }
+    .setaDireita{
+        background-image: url(src/img/sfx/setaAboutUs.png);
+        width: 1290px;
+        display: block;
+        position: relative;
+        top: 100px;
+        height: 44px;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        left: 50%;
+        transform: translateX(-50%);
     }
 }
 
 section.contactUs{
     min-height: 514px;
     background-color: rgba(74, 14, 72 , 0.72);
+
+    
 }
 
 /////////

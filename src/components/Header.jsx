@@ -4,7 +4,7 @@ function Header(){
     const logo = "./src/img/logo/logoNoBackground.png";
     return (
         <>
-            <header>
+            <header id="#">
                 <a href="/">
                 <div className="logo">
                     <img src={logo} alt="logo" className="logo"/>
@@ -13,9 +13,9 @@ function Header(){
                 </a>
                 <nav>
                     <ul>
-                        <li>WELCOME</li>
-                        <li>SHOWROOM</li>
-                        <li>ABOUT US</li>
+                        <li><a href="#">WELCOME</a></li>
+                        <li><a href="/showroom">SHOWROOM</a></li>
+                        <li><a href="#aboutUs">ABOUT US</a></li>
                     </ul>
                 </nav>
                 <div className="conta">

@@ -16,6 +16,7 @@ img {
 html {
   background-color: #02112D;
   color: white;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -35,6 +36,7 @@ div.logo img {
 
 a {
   text-decoration: none;
+  color: unset;
 }
 a:visited {
   color: unset;
@@ -49,7 +51,7 @@ header {
   background: linear-gradient(180deg, rgba(6, 7, 20, 0.72) 0%, rgba(21, 23, 70, 0) 112.5%);
   align-items: center;
   z-index: 2;
-  position: relative;
+  position: fixed;
   margin: 0;
 }
 header > * {
@@ -125,7 +127,6 @@ section.blackFrame {
   position: relative;
   width: 100%;
   height: 870px;
-  top: -140px;
 }
 section.blackFrame::before {
   content: "";
@@ -197,7 +198,6 @@ section.currentStockDIV {
           backdrop-filter: blur(80px);
   overflow: clip;
   padding-top: 130px;
-  margin-top: -141px;
 }
 section.currentStockDIV .line {
   display: block;
@@ -251,12 +251,46 @@ section.AboutUs {
   background-size: 180%;
   padding-top: 27px;
 }
+section.AboutUs .titleDefault {
+  margin-bottom: 96px;
+}
 section.AboutUs .titleDefault::before {
   background: radial-gradient(50% 50% at 50% 50%, #6D0751 0%, rgba(109, 7, 81, 0) 100%);
   z-index: -1;
 }
 section.AboutUs .content {
-  justify-content: space-evenly;
+  text-align: center;
+  justify-content: center;
+  gap: 100px;
+}
+section.AboutUs .content .L, section.AboutUs .content .R {
+  width: 500px;
+}
+section.AboutUs .content .aboutUsImg {
+  width: 503px;
+  border-radius: 15px;
+}
+section.AboutUs .content .weAreTopmark {
+  font-size: 50px;
+  text-align: center;
+  margin: 0;
+  margin-top: -14px;
+}
+section.AboutUs .content p {
+  font-weight: 200;
+  letter-spacing: 0.6px;
+}
+section.AboutUs .setaDireita {
+  background-image: url(src/img/sfx/setaAboutUs.png);
+  width: 1290px;
+  display: block;
+  position: relative;
+  top: 100px;
+  height: 44px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 section.contactUs {

@@ -274,7 +274,7 @@ section.blackFrame{
         left: 0;
         right: 0;
         bottom: 0;
-        background-image: url('/src/img/background/backgroundWelcome.png');
+        background-image: url('img/background/backgroundWelcome.webp');
         background-repeat: no-repeat;
         background-size: 104%;
         z-index: -1;
@@ -411,7 +411,7 @@ section.AboutUs{
     position: relative;
     z-index: 0;
 
-    background-image: url('src/img/background/backgroundBlur.png');
+    background-image: url('img/background/backgroundBlur.webp');
     background-position: center center;
     background-size: 180%;
     padding-top: 27px;
@@ -449,7 +449,7 @@ section.AboutUs{
         }
     }
     .setaDireita{
-        background-image: url(src/img/sfx/setaAboutUs.png);
+        background-image: url('img/sfx/setaAboutUs.webp');
         width: 1290px;
         display: block;
         position: relative;

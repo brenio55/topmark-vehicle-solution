@@ -1,5 +1,6 @@
+import logo from '/img/logo/logoNoBackground.png';
+
 function Footer(onLandingPage){
-    const logo = "./src/img/logo/logoNoBackground.png";
 
     let whereSymbol = onLandingPage ? '#' : '/';
     function verifyLogin(){
@@ -8,11 +9,11 @@ function Footer(onLandingPage){
         if (login){
 
         }else{
-            let logoImg = 'src/img/sfx/login.png';
+            let loginImg = 'img/sfx/login.png';
 
             return (<>
                 <a href="/admin">
-                    <img src={logoImg} alt="" />
+                    <img src={loginImg} alt="" />
                     <h4>Login</h4>
                 </a>
             </>);

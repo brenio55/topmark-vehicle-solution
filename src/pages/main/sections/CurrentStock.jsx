@@ -29,25 +29,25 @@ function CurrentStock(){
                     extensions={{ AutoScroll }}
                 >
                     <SplideSlide>
-                        <Car carSrc="src\img\cars\car1.png"
+                        <Car carSrc="img/cars/car1.webp"
                              carName="BMW M4"
                              carPrice="0,000"
                         />
                     </SplideSlide>
                     <SplideSlide>
-                        <Car carSrc="src\img\cars\car2.png"
+                        <Car carSrc="img/cars/car2.webp"
                              carName="BMW 7 Series"
                              carPrice="0,000"
                         />
                     </SplideSlide>
                     <SplideSlide>
-                        <Car carSrc="src\img\cars\car3.png"
+                        <Car carSrc="img/cars/car3.webp"
                              carName="BMW Z4 "
                              carPrice="0,000"
                         />
                     </SplideSlide>
                     <SplideSlide>
-                        <Car carSrc="src\img\cars\car4.png" 
+                        <Car carSrc="img/cars/car4.webp" 
                              carName="BMW M3"
                              carPrice="0,000"
                         />

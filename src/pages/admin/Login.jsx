@@ -3,6 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import Header from "../../components/Header";
 
+import logo from '/img/logo/logoNoBackgroundBlack.png';
+
 function Login(){
     const navigate = useNavigate(); // <-- get history from hook
     let Acesso
@@ -30,8 +32,6 @@ function Login(){
 
     const [user, setUser] = useState("");
     const [password, setPassword] = useState("");
-    
-    const logo = "./src/img/logo/logoNoBackgroundBlack.png";
 
     return (
         <>

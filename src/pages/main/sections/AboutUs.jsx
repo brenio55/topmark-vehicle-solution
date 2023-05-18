@@ -1,4 +1,4 @@
-let aboutUsImg = "src/img/aboutUs/aboutUs.png";
+let aboutUsImg = "img/aboutUs/aboutUs.webp";
 
 function AboutUs(){
     return (

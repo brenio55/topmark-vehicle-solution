@@ -64,6 +64,79 @@ header nav ul {
   gap: 20px;
   font-family: "Karla";
 }
+header nav ul li {
+  position: relative;
+}
+header nav ul li::before {
+  position: absolute;
+  width: 100%;
+  background-color: white;
+  bottom: 0px;
+  height: 0;
+  transition: all 0.2s;
+  content: "";
+}
+header nav ul li:hover::before {
+  height: 1px;
+  display: block;
+  transition: all 0.2s;
+}
+
+.conta {
+  position: relative;
+}
+.conta img {
+  width: 35px;
+  margin: 0;
+  position: relative;
+  margin-bottom: 3px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.conta h4 {
+  margin: 0;
+}
+
+footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  height: 180px;
+  color: white;
+  background: #02112D;
+  align-items: center;
+  z-index: 2;
+  margin: 0;
+}
+footer nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  font-family: "Karla";
+  text-align: center;
+}
+footer nav ul li {
+  position: relative;
+}
+footer nav ul li::before {
+  position: absolute;
+  width: 0%;
+  background-color: white;
+  bottom: 0px;
+  height: 1px;
+  transition: all 0.2s;
+  content: "";
+}
+footer nav ul li:hover::before {
+  height: 1px;
+  display: block;
+  transition: all 0.2s;
+  width: 100%;
+}
+footer .logo {
+  transform: scale(0.9);
+}
 
 button.buttonDefault {
   display: block;
@@ -91,11 +164,11 @@ button.buttonDefault:hover {
 
 .mark {
   height: 51.32px;
-  transition: all 0.2s;
+  transition: all 0.15s;
 }
 .mark:hover {
   transform: scale(1.2);
-  transition: all 0.2s;
+  transition: all 0.15s ease;
 }
 
 .flex {
@@ -128,6 +201,9 @@ section.blackFrame {
   width: 100%;
   height: 870px;
 }
+section.blackFrame h1 {
+  font-size: 2.3em;
+}
 section.blackFrame::before {
   content: "";
   position: absolute;
@@ -144,11 +220,11 @@ section.blackFrame .titles {
   filter: brightness(1);
   position: absolute;
   font-size: 25px;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.43) 28.13%, rgba(0, 0, 0, 0.388049) 72.92%, rgba(0, 0, 0, 0) 100%);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.37) 28.13%, rgba(0, 0, 0, 0.65) 72.92%, rgba(0, 0, 0, 0) 100%);
   mix-blend-mode: normal;
   top: 50%;
   transform: translateY(-50%);
-  min-height: 230px;
+  min-height: 440px;
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -163,9 +239,14 @@ section.blackFrame .titles h1 {
 section.blackFrame .titles .welcomeLine {
   display: block;
   width: 2px;
-  height: 106px;
+  height: 216px;
   background-color: #D9D9D9;
   position: absolute;
+}
+@media screen and (min-width: 1920px) {
+  section.blackFrame .titles .mark {
+    height: 60px;
+  }
 }
 section.blackFrame .titles .marks {
   display: flex;
@@ -177,13 +258,14 @@ button.viewShowroom {
   left: 50%;
   transform: translateX(-50%);
   bottom: 31%;
+  z-index: 2;
 }
 
 .setaWelcomeShowroom {
   position: absolute;
   display: block;
-  height: 360px;
-  bottom: -70px;
+  height: 295px;
+  bottom: 55px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 1;
@@ -330,15 +412,14 @@ section.contactUs .flex {
   align-items: center;
 }
 
-.telaCompleta {
+section.login .telaCompleta {
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #e2e2e5;
 }
-
-.quadradoLogin {
+section.login .quadradoLogin {
   display: flex;
   min-height: 130px;
   justify-content: center;
@@ -347,20 +428,29 @@ section.contactUs .flex {
   padding: 50px;
   font-family: sans-serif;
 }
-.quadradoLogin .L {
+section.login .quadradoLogin .L {
+  position: relative;
   display: block;
   background-color: white;
   padding: 15px;
   padding-left: 35px;
   min-height: 220px;
 }
-.quadradoLogin .L h1 {
+section.login .quadradoLogin .L h1 {
   margin-bottom: 55px;
 }
-.quadradoLogin .L p {
+section.login .quadradoLogin .L p {
   color: #7c7c7c;
+  position: relative;
+  top: 104px;
 }
-.quadradoLogin .R {
+section.login .quadradoLogin .L img {
+  width: 100px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+section.login .quadradoLogin .R {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -372,10 +462,10 @@ section.contactUs .flex {
   box-shadow: 0px 0px 40px 16px rgba(0, 0, 0, 0.22);
   padding: 30px;
 }
-.quadradoLogin .R label {
+section.login .quadradoLogin .R label {
   font-size: 14px;
 }
-.quadradoLogin .R input {
+section.login .quadradoLogin .R input {
   background-color: unset;
   border: none;
   border-bottom: 1px solid rgb(0, 132, 255);
@@ -383,14 +473,14 @@ section.contactUs .flex {
   margin-bottom: 15px;
   color: white;
 }
-.quadradoLogin .R input:focus {
+section.login .quadradoLogin .R input:focus {
   background-color: unset;
   outline: unset;
   color: white;
   transition: 1.4s all;
   border-bottom: 1px solid rgb(0, 153, 255);
 }
-.quadradoLogin .R button {
+section.login .quadradoLogin .R button {
   background-color: unset;
   border: unset;
   margin: 0 auto;

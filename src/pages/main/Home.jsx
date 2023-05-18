@@ -16,7 +16,7 @@ function Home(){
                 <AboutUs></AboutUs>
                 <Contact></Contact>
             </main>
-            <Footer></Footer>
+            <Footer onLandingPage={true}></Footer>
         </>
     )
 }

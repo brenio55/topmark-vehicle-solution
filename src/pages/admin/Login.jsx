@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import Header from "../../components/Header";
 
 function Login(){
     const navigate = useNavigate(); // <-- get history from hook
@@ -30,13 +31,16 @@ function Login(){
     const [user, setUser] = useState("");
     const [password, setPassword] = useState("");
     
+    const logo = "./src/img/logo/logoNoBackgroundBlack.png";
 
     return (
         <>
+        <section className="login">
+            <Header></Header>
             <div className="telaCompleta">
                 <div className="quadradoLogin">
                     <div className="L">
-                        <h1><b>Login</b></h1>
+                        <img src={logo} alt="logo" className="logo"/>
                         <p>Login to your account to enter on this page</p>
                     </div>
                     <div className="R">
@@ -53,6 +57,7 @@ function Login(){
                     </div>
                 </div>
             </div>
+        </section>
         </>
     )
 }

@@ -211,7 +211,7 @@ section.blackFrame::before {
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url("img/background/backgroundWelcome.webp");
+  background-image: url("/img/background/backgroundWelcome.webp");
   background-repeat: no-repeat;
   background-size: 104%;
   z-index: -1;

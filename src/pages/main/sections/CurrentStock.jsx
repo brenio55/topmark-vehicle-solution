@@ -54,7 +54,7 @@ function CurrentStock(){
                     </SplideSlide>
                 </Splide>
 
-                <button type='button' className="buttonDefault exploreMore">EXPLORE MORE</button>
+                <a href="/showroom"><button type='button' className="buttonDefault exploreMore">EXPLORE MORE</button></a>
            </section>
 
            

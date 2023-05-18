@@ -311,7 +311,7 @@ section.currentStockDIV{
 }
 
 section.AboutUs{
-    min-height: 1084px;
+    min-height: 950px;
     position: relative;
     z-index: 0;
 
@@ -367,10 +367,45 @@ section.AboutUs{
 }
 
 section.contactUs{
-    min-height: 514px;
+    min-height: 444px;
     background-color: rgba(74, 14, 72 , 0.72);
+    padding-top: 70px;
 
-    
+    h2.titleDefault{
+        margin-top: 0;
+        &::before{
+            background: none;
+        }        
+    }
+
+    .phoneIcon, .emailIcon, .addressIcon{
+        height: 27px;
+    }
+
+    .emailIcon{
+        height: 32px;
+    }
+    .addressIcon{
+        height: 39px;
+    }
+
+    img{
+        max-width: 100%;
+    }
+
+    .contactInfo{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .flex{
+        gap: 25px;
+        width: fit-content;
+        align-items: center;
+    }
 }
 
 /////////

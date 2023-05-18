@@ -243,7 +243,7 @@ section.currentStockDIV .exploreMore {
 }
 
 section.AboutUs {
-  min-height: 1084px;
+  min-height: 950px;
   position: relative;
   z-index: 0;
   background-image: url("src/img/background/backgroundBlur.png");
@@ -294,8 +294,40 @@ section.AboutUs .setaDireita {
 }
 
 section.contactUs {
-  min-height: 514px;
+  min-height: 444px;
   background-color: rgba(74, 14, 72, 0.72);
+  padding-top: 70px;
+}
+section.contactUs h2.titleDefault {
+  margin-top: 0;
+}
+section.contactUs h2.titleDefault::before {
+  background: none;
+}
+section.contactUs .phoneIcon, section.contactUs .emailIcon, section.contactUs .addressIcon {
+  height: 27px;
+}
+section.contactUs .emailIcon {
+  height: 32px;
+}
+section.contactUs .addressIcon {
+  height: 39px;
+}
+section.contactUs img {
+  max-width: 100%;
+}
+section.contactUs .contactInfo {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+section.contactUs .flex {
+  gap: 25px;
+  width: -moz-fit-content;
+  width: fit-content;
+  align-items: center;
 }
 
 .telaCompleta {

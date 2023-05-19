@@ -13,7 +13,7 @@ function Login(){
         event.preventDefault()
 
         axios.defaults.headers.post['Content-Type'] = 'application/json';
-        axios.post('http://localhost/1A_%20freelancers/chrissyboy/api/iniciarSessionAPI.php', {user: user, password: password})
+        axios.post('http://localhost/1A_%20freelancers/chrissyboy/public/api/iniciarSessionAPI.php', {user: user, password: password})
         .then(response => {
             console.log(response.data)
 

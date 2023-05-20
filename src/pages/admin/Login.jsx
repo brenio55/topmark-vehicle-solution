@@ -5,6 +5,8 @@ import Header from "../../components/Header";
 
 import logo from '/img/logo/logoNoBackgroundBlack.png';
 
+const initSession = 'http://topmarkvehiclesolutions.co.uk/api/iniciarSessionAPI.php';
+
 function Login(){
     const navigate = useNavigate(); // <-- get history from hook
     let Acesso
@@ -13,7 +15,7 @@ function Login(){
         event.preventDefault()
 
         axios.defaults.headers.post['Content-Type'] = 'application/json';
-        axios.post('http://localhost/1A_%20freelancers/chrissyboy/public/api/iniciarSessionAPI.php', {user: user, password: password})
+        axios.post(initSession, {user: user, password: password})
         .then(response => {
             console.log(response.data)
 

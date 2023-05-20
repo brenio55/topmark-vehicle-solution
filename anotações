@@ -1,1 +1,29 @@
 Resolvi um problema de importação de imagens colocando todas as imagens para dentro da pasta Public.
+
+----------------------------------------------------------------------------------------------------
+
+Como resolvi o bug da não-conexão com o banco de dados dentro do servidor Godaddy:
+1- Primeiro, eu precisei mover todos os meus arquivos da API para dentro da pasta public, no meu React Project.
+2- Precisei também mover os arquivos de dependência do PHP (pasta vendor) para o diretório raiz dentro do servidor
+3- Depois disso, criei o banco de dados dentro do MySQL Databases da Godaddy, bem como os usuários que poderiam acessar aquele banco de dados. 
+4- Após isso, criei as tabelas dentro do PHPMyAdmin
+5- Feito isso, coloquei as informações do usuário criado dentro do meu arquivo .env
+6- Alterei também meu arquivo .htaccess para que ele me retornasse corretamente arquivos que começavam com a rota /api/, desta forma:
+    <IfModule mod_rewrite.c>
+        RewriteEngine On
+        RewriteBase /
+
+        # Ignorar regras de reescrita para o arquivo PHP específico
+        RewriteRule ^api/arquivo\.php$ - [L]
+
+        RewriteRule ^index.html$ - [L]
+
+        RewriteCond %{REQUEST_FILENAME} !-f
+        RewriteCond %{REQUEST_FILENAME} !-d
+        RewriteRule . /index.html [L]
+    </IfModule>
+
+7- Feito tudo isso, a última coisa que faltava ajustar, era por onde seriam executados os scripts PHP dentro do apache e retornado o JSON, caso contrário, ele retornaria meu arquivo seco sem execução.
+Para isso, simplesmente coloquei o endereço do meu site /api/arquivo.php
+
+-> É importante fazer uma segurança na API

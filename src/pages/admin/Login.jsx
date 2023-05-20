@@ -5,11 +5,12 @@ import Header from "../../components/Header";
 
 import logo from '/img/logo/logoNoBackgroundBlack.png';
 
-const initSession = 'http://topmarkvehiclesolutions.co.uk/api/iniciarSessionAPI.php';
+const initSession = import.meta.env.VITE_APISRC
+// console.log(initSession)
 
 function Login(){
     const navigate = useNavigate(); // <-- get history from hook
-    let Acesso
+    let Acesso = Int16Array
 
     function requestLoginAPI(event){
         event.preventDefault()
@@ -28,7 +29,7 @@ function Login(){
 
         })
         .catch(response => {
-            console.log(response.error);
+            console.log(response);
         });
     }
 

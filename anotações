@@ -27,3 +27,12 @@ Como resolvi o bug da não-conexão com o banco de dados dentro do servidor Goda
 Para isso, simplesmente coloquei o endereço do meu site /api/arquivo.php
 
 -> É importante fazer uma segurança na API
+
+--------------------------------------------------
+
+variáveis de ambiente com vite react
+
+Se definem ao invés de com process.env, com import.meta.env
+const initSession = import.meta.env.VITE_APISRC
+
+Todas as variáveis criadas pelo usuário deverão ter o prefixo VITE_

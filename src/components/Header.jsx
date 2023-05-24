@@ -38,10 +38,11 @@ function Header({onLandingPage}){
                         <li><a href="/showroom">SHOWROOM</a></li>
                         <li><a href={whereSymbol+'aboutUs'}>ABOUT US</a></li>
                     </ul>
+                    <div className="conta">                    
+                        {verifyLogin()}
+                    </div>
                 </nav>
-                <div className="conta">                    
-                    {verifyLogin()}
-                </div>
+                
         </header>
         </>
     )

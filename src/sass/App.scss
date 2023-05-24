@@ -59,7 +59,22 @@ header{
     width: 100%;
     display: flex;
     justify-content: space-evenly;
-    height: 137px;
+
+    @media (min-width: 0px){
+        flex-direction: column;
+        height: 92px;
+    }
+
+    @media (min-width: 768px){
+        height: 137px;
+    }
+
+    @media (min-width: 1150px) {
+        flex-direction: row;
+        
+    }
+    
+    
     color: white;
     background: linear-gradient(180deg, rgba(6, 7, 20, 0.72) 0%, rgba(21, 23, 70, 0) 112.5%);
     align-items: center;
@@ -74,11 +89,47 @@ header{
     }
 
     nav{
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+
+        @media (min-width: 0px){
+            position: absolute;
+            width: 100%;
+            top: 92px;
+            background-color: rgb(22, 22, 60);
+
+            flex-direction: column;
+            align-items: center;
+        }
+
+        @media (min-width: 1150px){
+            position: static;
+            width: unset;
+            top: unset;
+            background-color: unset;
+            flex-direction: row;
+        }
+
         ul{
             list-style: none;
             display: flex;
             gap: 20px;
             font-family: 'Karla';
+
+            @media (min-width: 0px){
+                flex-direction: column;
+                align-items: center;
+
+                list-style-position: inside;
+                padding-left: 0;
+            }
+
+            @media (min-width: 1150px) {
+                padding-left: unset;
+                flex-direction: row;
+                align-items: unset;
+            }
 
             li{
                 $hoverActive: false;
@@ -105,7 +156,20 @@ header{
 }
 
 .conta {
+    display: flex;
+    align-items: center;
     position: relative;
+
+    @media (min-width: 0px){
+        left: unset;
+        padding: 10px 0px;
+    }
+
+    @media (min-width: 1150px) {
+        left: 90%;
+    }
+
+    left: 90px;
 
     img{
         width: 35px;
@@ -134,6 +198,7 @@ footer{
     margin: 0;
 
     nav{
+
         ul{
             list-style: none;
             display: flex;
@@ -615,6 +680,38 @@ section.login{
     }
     
 
+}
+
+section.dashboard{
+    min-height: 820px;
+    display: block;
+    background-color: white;
+    position: relative;
+    top: 135px;
+    padding-top: 50px;
+
+    aside{
+        display: block;
+        color: black;
+        position: absolute;
+        left: 0;
+    }
+
+    div.dashboardActions{
+        display: flex;
+        justify-content: center;
+        gap: 80px;
+
+        article.dashboardAction{
+            display: flex;
+            background-color: wheat;
+            height: 250px;
+            width: 380px;
+            justify-content: center;
+            align-items: center;
+            color: #02112D;
+        }
+    }
 }
 
 

@@ -6,7 +6,11 @@ import Header from "../../components/Header";
 import logo from '/img/logo/logoNoBackgroundBlack.png';
 
 const initSession = import.meta.env.VITE_APISRC
-// console.log(initSession)
+console.log(initSession)
+
+function loginIniciado(){
+    
+}
 
 function Login(){
     const navigate = useNavigate(); // <-- get history from hook

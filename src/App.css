@@ -27,11 +27,39 @@ div.logo {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   gap: 12px;
   font-size: 12px;
 }
 div.logo img {
-  width: 62px;
+  height: 62px;
+}
+@media (min-width: 320px) {
+  div.logo img {
+    height: 52px;
+  }
+}
+@media (min-width: 600px) {
+  div.logo img {
+    height: 62px;
+  }
+}
+@media (min-width: 320px) {
+  div.logo {
+    padding-left: 5px;
+  }
+}
+@media (min-width: 320px) {
+  div.logo h1 {
+    font-size: 16px;
+    width: 100px;
+  }
+}
+@media (min-width: 600px) {
+  div.logo h1 {
+    font-size: 2em;
+    width: unset;
+  }
 }
 
 a {
@@ -86,6 +114,12 @@ header nav {
     background-color: rgb(22, 22, 60);
     flex-direction: column;
     align-items: center;
+    display: none;
+  }
+}
+@media (min-width: 600px) {
+  header nav {
+    display: flex;
   }
 }
 @media (min-width: 1150px) {
@@ -140,17 +174,12 @@ header nav ul li:hover::before {
   display: flex;
   align-items: center;
   position: relative;
-  left: 90px;
 }
 @media (min-width: 0px) {
   .conta {
     left: unset;
     padding: 10px 0px;
-  }
-}
-@media (min-width: 1150px) {
-  .conta {
-    left: 90%;
+    left: 65px;
   }
 }
 .conta img {
@@ -269,40 +298,101 @@ section.blackFrame {
   width: 100%;
   height: 870px;
 }
+@media (min-width: 320px) {
+  section.blackFrame {
+    height: 649px;
+  }
+}
+@media (min-width: 600px) {
+  section.blackFrame {
+    height: 870px;
+  }
+}
 section.blackFrame h1 {
   font-size: 2.3em;
 }
-section.blackFrame::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: url("img/background/backgroundWelcome.webp");
-  background-repeat: no-repeat;
-  background-size: 104%;
-  z-index: -1;
+@media (min-width: 320px) {
+  section.blackFrame h1 {
+    height: 36px;
+  }
 }
-section.blackFrame .titles {
-  filter: brightness(1);
-  position: absolute;
-  font-size: 25px;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.37) 28.13%, rgba(0, 0, 0, 0.65) 72.92%, rgba(0, 0, 0, 0) 100%);
-  mix-blend-mode: normal;
-  top: 50%;
-  transform: translateY(-50%);
-  min-height: 440px;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  align-content: center;
-  align-items: center;
-  text-align: center;
-  justify-content: space-evenly;
+@media (min-width: 600px) {
+  section.blackFrame h1 {
+    height: unset;
+  }
+}
+@media (min-width: 0px) {
+  section.blackFrame::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("img/background/backgroundWelcome.webp");
+    background-repeat: no-repeat;
+    background-size: 244%;
+    z-index: -1;
+  }
+}
+@media (min-width: 320px) {
+  section.blackFrame::before {
+    background-size: 374%;
+    background-position-x: -330px;
+  }
+}
+@media (min-width: 600px) {
+  section.blackFrame::before {
+    background-size: 104%;
+    background-position-x: unset;
+  }
+}
+@media (min-width: 0px) {
+  section.blackFrame .titles {
+    filter: brightness(1);
+    position: absolute;
+    font-size: 25px;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.37) 28.13%, rgba(0, 0, 0, 0.65) 72.92%, rgba(0, 0, 0, 0) 100%);
+    mix-blend-mode: normal;
+    top: 50%;
+    transform: translateY(-50%);
+    min-height: 440px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+    justify-content: space-evenly;
+  }
+}
+@media (min-width: 320px) {
+  section.blackFrame .titles {
+    flex-direction: column;
+  }
+}
+@media (min-width: 600px) {
+  section.blackFrame .titles {
+    flex-direction: row;
+  }
 }
 section.blackFrame .titles h1 {
   width: 380px;
+}
+@media (min-width: 320px) {
+  section.blackFrame .titles h1 {
+    font-size: 36px;
+  }
+}
+@media (min-width: 408px) {
+  section.blackFrame .titles h1 {
+    font-size: 33px;
+  }
+}
+@media (min-width: 600px) {
+  section.blackFrame .titles h1 {
+    font-size: 48px;
+  }
 }
 section.blackFrame .titles .welcomeLine {
   display: block;
@@ -310,6 +400,18 @@ section.blackFrame .titles .welcomeLine {
   height: 216px;
   background-color: #D9D9D9;
   position: absolute;
+}
+@media (min-width: 320px) {
+  section.blackFrame .titles .welcomeLine {
+    rotate: 90deg;
+    height: 96px;
+  }
+}
+@media (min-width: 600px) {
+  section.blackFrame .titles .welcomeLine {
+    rotate: 0deg;
+    height: 216px;
+  }
 }
 @media screen and (min-width: 1920px) {
   section.blackFrame .titles .mark {
@@ -320,6 +422,22 @@ section.blackFrame .titles .marks {
   display: flex;
   gap: 20px;
 }
+@media (min-width: 320px) {
+  section.blackFrame .titles .marks {
+    flex-wrap: wrap;
+    scale: 0.9;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media (min-width: 600px) {
+  section.blackFrame .titles .marks {
+    height: 870px;
+    flex-wrap: nowrap;
+    scale: unset;
+    justify-content: unset;
+  }
+}
 
 button.viewShowroom {
   position: absolute;
@@ -327,6 +445,16 @@ button.viewShowroom {
   transform: translateX(-50%);
   bottom: 31%;
   z-index: 2;
+}
+@media (min-width: 320px) {
+  button.viewShowroom {
+    display: none;
+  }
+}
+@media (min-width: 600px) {
+  button.viewShowroom {
+    display: block;
+  }
 }
 
 .setaWelcomeShowroom {
@@ -338,6 +466,16 @@ button.viewShowroom {
   transform: translateX(-50%);
   z-index: 1;
 }
+@media (min-width: 320px) {
+  .setaWelcomeShowroom {
+    bottom: -107px;
+  }
+}
+@media (min-width: 600px) {
+  .setaWelcomeShowroom {
+    bottom: 65px;
+  }
+}
 
 section.currentStockDIV {
   position: relative;
@@ -348,6 +486,16 @@ section.currentStockDIV {
           backdrop-filter: blur(80px);
   overflow: clip;
   padding-top: 130px;
+}
+@media (min-width: 320px) {
+  section.currentStockDIV {
+    min-height: 715px;
+  }
+}
+@media (min-width: 600px) {
+  section.currentStockDIV {
+    min-height: 870px;
+  }
 }
 section.currentStockDIV .line {
   display: block;
@@ -365,6 +513,20 @@ section.currentStockDIV .line:nth-child(2) {
 }
 section.currentStockDIV .titleDefault {
   margin-top: -27px;
+}
+@media (min-width: 320px) {
+  section.currentStockDIV .titleDefault {
+    margin-top: -57px;
+    font-size: 26px;
+    margin-bottom: 35px;
+  }
+}
+@media (min-width: 600px) {
+  section.currentStockDIV .titleDefault {
+    margin-top: -27px;
+    font-size: 58px;
+    margin-bottom: 35px;
+  }
 }
 section.currentStockDIV .spliceSlide {
   margin: auto 10px;
@@ -390,6 +552,16 @@ section.currentStockDIV .exploreMore {
   left: 50%;
   transform: translateX(-50%) scale(1.2);
   bottom: 18%;
+}
+@media (min-width: 320px) {
+  section.currentStockDIV .exploreMore {
+    bottom: 7%;
+  }
+}
+@media (min-width: 600px) {
+  section.currentStockDIV .exploreMore {
+    bottom: 18%;
+  }
 }
 
 section.AboutUs {
@@ -430,6 +602,20 @@ section.AboutUs .content p {
   font-weight: 200;
   letter-spacing: 0.6px;
 }
+@media (min-width: 320px) {
+  section.AboutUs .content {
+    flex-direction: column;
+    padding: 0px 10px;
+    gap: 20px;
+  }
+}
+@media (min-width: 600px) {
+  section.AboutUs .content {
+    flex-direction: row;
+    padding: unset;
+    gap: 100px;
+  }
+}
 section.AboutUs .setaDireita {
   background-image: url("img/sfx/setaAboutUs.webp");
   width: 1290px;
@@ -442,6 +628,16 @@ section.AboutUs .setaDireita {
   left: 50%;
   transform: translateX(-50%);
 }
+@media (min-width: 320px) {
+  section.AboutUs .setaDireita {
+    display: none;
+  }
+}
+@media (min-width: 600px) {
+  section.AboutUs .setaDireita {
+    display: block;
+  }
+}
 
 section.contactUs {
   min-height: 444px;
@@ -453,6 +649,27 @@ section.contactUs h2.titleDefault {
 }
 section.contactUs h2.titleDefault::before {
   background: none;
+}
+@media (min-width: 320px) {
+  section.contactUs h2.titleDefault {
+    font-size: 36px;
+  }
+}
+@media (min-width: 600px) {
+  section.contactUs h2.titleDefault {
+    font-size: 58px;
+  }
+}
+@media (min-width: 320px) {
+  section.contactUs h3 {
+    font-size: 15px;
+    word-break: break-all;
+  }
+}
+@media (min-width: 600px) {
+  section.contactUs h3 {
+    font-size: initial;
+  }
 }
 section.contactUs .phoneIcon, section.contactUs .emailIcon, section.contactUs .addressIcon {
   height: 27px;
@@ -478,6 +695,18 @@ section.contactUs .flex {
   width: -moz-fit-content;
   width: fit-content;
   align-items: center;
+}
+@media (min-width: 320px) {
+  section.contactUs .flex {
+    gap: 5px;
+    padding: 0px 41px;
+  }
+}
+@media (min-width: 600px) {
+  section.contactUs .flex {
+    gap: 25px;
+    padding: initial;
+  }
 }
 
 section.login .telaCompleta {

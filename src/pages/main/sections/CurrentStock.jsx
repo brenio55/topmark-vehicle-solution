@@ -5,8 +5,38 @@ import { AutoScroll } from '@splidejs/splide-extension-auto-scroll';
 import '@splidejs/splide/css';
 import Car from './CurrentStock/Car';
 
+import { useState, useEffect } from 'react';
 
 function CurrentStock(){
+    const [carPerPage, setCarPerPage] = useState(4);
+    const [width, setWidth] = useState(window.innerWidth)
+
+    useEffect(() => {
+        const updateWindowDimensions = () => {
+          const newWidth = window.innerWidth;
+          setWidth(newWidth);
+          console.log('updating width');
+        };
+      
+        window.addEventListener("resize", updateWindowDimensions);
+        return () => {
+          window.removeEventListener("resize", updateWindowDimensions);
+        };
+      }, []);
+      
+      useEffect(() => {
+        if ((width >= 320) && (width < 600)) {
+          setCarPerPage(1);
+        } else if ((width >= 600) && (width < 1150)) {
+          setCarPerPage(3);
+        } else if ((width >= 1150) && (width < 1368)) {
+          setCarPerPage(4);
+        }
+      }, [width]);
+      
+      console.log('width = ' + width);
+      console.log('carPerPage = ' + carPerPage);
+
     return (
         <>
            <section className="currentStockDIV">
@@ -14,13 +44,13 @@ function CurrentStock(){
 
                 <span className='line'></span>
                 <span className='line'></span>
-
+                
                 <Splide aria-label="My Favorite Images"
                     options={{
                         type   : 'loop',
                         drag   : 'free',
                         focus  : 'center',
-                        perPage: 4,
+                        perPage: carPerPage,
                         autoScroll: {
                           speed: 0.4,
                         },

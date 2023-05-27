@@ -31,6 +31,7 @@ function Header({onLandingPage}){
                     <h1>TOPMARK VEHICLE SOLUTIONS</h1>
                 </div>    
                 </a>
+                <span className='menuIcon'></span>
                 <nav>
                     <ul>
                         <li><a href={whereSymbol}>    

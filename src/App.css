@@ -506,7 +506,12 @@ button.viewShowroom {
 }
 @media (min-width: 1920px) {
   button.viewShowroom {
-    top: 56%;
+    top: 60%;
+  }
+}
+@media (min-width: 1920px) and (min-height: 960px) {
+  button.viewShowroom {
+    top: 67%;
   }
 }
 

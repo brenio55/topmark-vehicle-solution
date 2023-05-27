@@ -557,6 +557,18 @@ button.viewShowroom{
     @media (min-width: 1150px){
         display: block;
     }
+
+    @media (min-width: 1366px){
+        top: 78%;
+    }
+
+    @media (min-width: 1440px){
+        top: 70%;
+    }
+
+    @media (min-width: 1920px){
+        top: 56%;
+    }
 }
 
 .divSetaWelcomeShowroom{
@@ -583,6 +595,18 @@ button.viewShowroom{
 
     @media (min-width: 1150px){
         top: 550px;
+    }
+
+    @media (min-width: 1366px){
+        top: 640px;
+    }
+
+    @media (min-width: 1440px){
+        top: 680px;
+    }
+
+    @media (min-width: 1920px){
+        top: 720px;
     }
 }
 

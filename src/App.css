@@ -494,6 +494,21 @@ button.viewShowroom {
     display: block;
   }
 }
+@media (min-width: 1366px) {
+  button.viewShowroom {
+    top: 78%;
+  }
+}
+@media (min-width: 1440px) {
+  button.viewShowroom {
+    top: 70%;
+  }
+}
+@media (min-width: 1920px) {
+  button.viewShowroom {
+    top: 56%;
+  }
+}
 
 .divSetaWelcomeShowroom {
   position: absolute;
@@ -517,6 +532,21 @@ button.viewShowroom {
 @media (min-width: 1150px) {
   .divSetaWelcomeShowroom {
     top: 550px;
+  }
+}
+@media (min-width: 1366px) {
+  .divSetaWelcomeShowroom {
+    top: 640px;
+  }
+}
+@media (min-width: 1440px) {
+  .divSetaWelcomeShowroom {
+    top: 680px;
+  }
+}
+@media (min-width: 1920px) {
+  .divSetaWelcomeShowroom {
+    top: 720px;
   }
 }
 

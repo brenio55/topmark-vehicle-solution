@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import logo from '/img/logo/logoNoBackground.png';
 
 function Header({onLandingPage}){
@@ -21,6 +22,7 @@ function Header({onLandingPage}){
         }
     }
 
+    const [menuClasseMostrar, setMenuClasseMostrar] = useState('');
 
     return (
         <>
@@ -31,8 +33,14 @@ function Header({onLandingPage}){
                     <h1>TOPMARK VEHICLE SOLUTIONS</h1>
                 </div>    
                 </a>
-                <span className='menuIcon'></span>
-                <nav>
+                <span className='menuIcon' onClick={() => {
+                    console.log("Menu clicado"); 
+                    if (menuClasseMostrar == '')
+                        setMenuClasseMostrar('mostrarNav');
+                    else
+                        setMenuClasseMostrar('');
+                }}></span>
+                <nav className={menuClasseMostrar}>
                     <ul>
                         <li><a href={whereSymbol}>    
                         WELCOME</a></li>

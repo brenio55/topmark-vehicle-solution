@@ -70,6 +70,11 @@ a:visited {
   color: unset;
 }
 
+.mostrarNav {
+  left: 0;
+  transition: all 0.2s;
+}
+
 header {
   width: 100%;
   display: flex;
@@ -82,14 +87,9 @@ header {
 }
 @media (min-width: 0px) {
   header {
-    flex-direction: column;
     height: 92px;
     background-color: rgba(0, 0, 0, 0.8509803922);
-  }
-}
-@media (min-width: 600px) {
-  header {
-    background: linear-gradient(180deg, rgba(6, 7, 20, 0.72) 0%, rgba(21, 23, 70, 0) 112.5%);
+    align-items: center;
   }
 }
 @media (min-width: 768px) {
@@ -99,6 +99,7 @@ header {
 }
 @media (min-width: 1150px) {
   header {
+    background: linear-gradient(180deg, rgba(6, 7, 20, 0.72) 0%, rgba(21, 23, 70, 0) 112.5%);
     flex-direction: row;
   }
 }
@@ -106,10 +107,28 @@ header > * {
   margin: 0;
   padding: 0;
 }
+header span.menuIcon {
+  content: url("img/sfx/menuBar.png");
+  width: 50px;
+}
+header span.menuIcon:hover {
+  cursor: pointer;
+}
+@media (min-width: 320px) {
+  header span.menuIcon {
+    display: block;
+  }
+}
+@media (min-width: 1150px) {
+  header span.menuIcon {
+    display: none;
+  }
+}
 header nav {
   display: flex;
   align-items: center;
   flex-direction: row;
+  transition: all 0.2s;
 }
 @media (min-width: 0px) {
   header nav {
@@ -119,6 +138,7 @@ header nav {
     background-color: rgba(0, 0, 0, 0.8509803922);
     flex-direction: column;
     align-items: center;
+    left: -100%;
   }
 }
 @media (min-width: 600px) {
@@ -126,11 +146,17 @@ header nav {
     display: flex;
   }
 }
+@media (min-width: 768px) {
+  header nav {
+    top: 137px;
+  }
+}
 @media (min-width: 1150px) {
   header nav {
     position: static;
     width: unset;
     top: unset;
+    left: unset;
     background-color: unset;
     flex-direction: row;
   }
@@ -311,7 +337,7 @@ section.blackFrame {
     height: 649px;
   }
 }
-@media (min-width: 600px) {
+@media (min-width: 1150px) {
   section.blackFrame {
     height: 870px;
   }
@@ -351,6 +377,11 @@ section.blackFrame h1 {
 }
 @media (min-width: 600px) {
   section.blackFrame::before {
+    background-size: 200%;
+  }
+}
+@media (min-width: 1150px) {
+  section.blackFrame::before {
     background-size: 104%;
     background-position-x: unset;
   }
@@ -379,7 +410,7 @@ section.blackFrame h1 {
     flex-direction: column;
   }
 }
-@media (min-width: 600px) {
+@media (min-width: 1150px) {
   section.blackFrame .titles {
     flex-direction: row;
   }
@@ -397,7 +428,7 @@ section.blackFrame .titles h1 {
     font-size: 33px;
   }
 }
-@media (min-width: 600px) {
+@media (min-width: 1150px) {
   section.blackFrame .titles h1 {
     font-size: 48px;
   }
@@ -415,7 +446,7 @@ section.blackFrame .titles .welcomeLine {
     height: 96px;
   }
 }
-@media (min-width: 600px) {
+@media (min-width: 1150px) {
   section.blackFrame .titles .welcomeLine {
     rotate: 0deg;
     height: 216px;
@@ -438,10 +469,9 @@ section.blackFrame .titles .marks {
     align-items: center;
   }
 }
-@media (min-width: 600px) {
+@media (min-width: 1150px) {
   section.blackFrame .titles .marks {
-    height: 870px;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     scale: unset;
     justify-content: unset;
   }
@@ -451,7 +481,7 @@ button.viewShowroom {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  bottom: 31%;
+  top: 74%;
   z-index: 2;
 }
 @media (min-width: 320px) {
@@ -459,30 +489,39 @@ button.viewShowroom {
     display: none;
   }
 }
-@media (min-width: 600px) {
+@media (min-width: 1150px) {
   button.viewShowroom {
     display: block;
   }
 }
 
-.setaWelcomeShowroom {
+.divSetaWelcomeShowroom {
   position: absolute;
   display: block;
-  height: 295px;
   bottom: 55px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 1;
+  width: 300px;
 }
 @media (min-width: 320px) {
-  .setaWelcomeShowroom {
-    bottom: -107px;
+  .divSetaWelcomeShowroom {
+    top: 480px;
   }
 }
 @media (min-width: 600px) {
-  .setaWelcomeShowroom {
-    bottom: 65px;
+  .divSetaWelcomeShowroom {
+    top: 500px;
   }
+}
+@media (min-width: 1150px) {
+  .divSetaWelcomeShowroom {
+    top: 550px;
+  }
+}
+
+.setaWelcomeShowroom {
+  height: 300px;
 }
 
 section.currentStockDIV {
@@ -620,8 +659,18 @@ section.AboutUs .content p {
 @media (min-width: 600px) {
   section.AboutUs .content {
     flex-direction: row;
-    padding: unset;
+    padding: 0px 20px;
     gap: 100px;
+  }
+}
+@media (min-width: 320px) {
+  section.AboutUs .content.flex {
+    align-items: center;
+  }
+}
+@media (min-width: 1150px) {
+  section.AboutUs .content.flex {
+    align-items: unset;
   }
 }
 section.AboutUs .setaDireita {
@@ -641,7 +690,7 @@ section.AboutUs .setaDireita {
     display: none;
   }
 }
-@media (min-width: 600px) {
+@media (min-width: 720px) {
   section.AboutUs .setaDireita {
     display: block;
   }

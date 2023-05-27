@@ -81,19 +81,24 @@ a{
     }
 }
 
+.mostrarNav{
+    left: 0;
+    transition: all 0.2s;
+}
+
 header{
     width: 100%;
     display: flex;
     justify-content: space-evenly;
 
     @media (min-width: 0px){
-        flex-direction: column;
         height: 92px;
         background-color: #000000d9;
+        align-items: center;
     }
 
     @media (min-width: 600px){
-        background: linear-gradient(180deg, rgba(6, 7, 20, 0.72) 0%, rgba(21, 23, 70, 0) 112.5%);
+        
     }
 
     @media (min-width: 768px){
@@ -101,6 +106,7 @@ header{
     }
 
     @media (min-width: 1150px) {
+        background: linear-gradient(180deg, rgba(6, 7, 20, 0.72) 0%, rgba(21, 23, 70, 0) 112.5%);
         flex-direction: row;
         
     }
@@ -118,10 +124,32 @@ header{
         padding: 0;
     }
 
+    span.menuIcon{
+        content: url('img/sfx/menuBar.png');
+        width: 50px;
+
+        &:hover{
+            cursor: pointer;
+        }
+
+        @media (min-width: 320px){
+            display: block;     
+        }
+    
+        @media (min-width: 600px){
+           
+        }
+
+        @media (min-width: 1150px){
+            display: none;
+        }
+    }
+
     nav{
         display: flex;
         align-items: center;
         flex-direction: row;
+        transition: all 0.2s;
 
         @media (min-width: 0px){
             position: absolute;
@@ -131,6 +159,7 @@ header{
 
             flex-direction: column;
             align-items: center;
+            left: -100%;
         }
 
         @media (min-width: 600px){
@@ -138,10 +167,15 @@ header{
             
         }
 
+        @media (min-width: 768px){
+            top: 137px;
+        }
+
         @media (min-width: 1150px){
             position: static;
             width: unset;
             top: unset;
+            left: unset;
             background-color: unset;
             flex-direction: row;
         }
@@ -364,7 +398,7 @@ section.blackFrame{
         height: 649px;
     }
 
-    @media (min-width: 600px){
+    @media (min-width: 1150px){
         height: 870px;
     }
 
@@ -405,6 +439,10 @@ section.blackFrame{
         }
 
         @media (min-width: 600px){
+            background-size: 200%;
+        }
+
+        @media (min-width: 1150px){
             background-size: 104%;
             background-position-x: unset;
         }
@@ -436,11 +474,11 @@ section.blackFrame{
             }
             
             @media (min-width: 600px){
-                flex-direction: row;
+                
             }
 
             @media (min-width: 1150px){
-                
+                flex-direction: row;
             }
             h1{
                 width: 380px;
@@ -453,7 +491,7 @@ section.blackFrame{
                     font-size: 33px;
                 }
 
-                @media (min-width: 600px){
+                @media (min-width: 1150px){
                     font-size: 48px;
                 }
             }
@@ -469,7 +507,7 @@ section.blackFrame{
                     height: 96px;
                 }
             
-                @media (min-width: 600px){
+                @media (min-width: 1150px){
                     rotate: 0deg;
                     height: 216px;
                 }
@@ -490,9 +528,8 @@ section.blackFrame{
                     align-items: center;
                 }
             
-                @media (min-width: 600px){
-                    height: 870px;
-                    flex-wrap: nowrap;
+                @media (min-width: 1150px){
+                    flex-wrap: wrap;
                     scale: unset;
                     justify-content: unset;
                 }
@@ -510,34 +547,47 @@ button.viewShowroom{
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    bottom: 31%;
+    top: 74%;
     z-index: 2;
 
     @media (min-width: 320px){
         display: none;
     }
 
-    @media (min-width: 600px){
+    @media (min-width: 1150px){
         display: block;
     }
 }
 
-.setaWelcomeShowroom{
+.divSetaWelcomeShowroom{
     position: absolute;
     display: block;
-    height: 295px;
+    
     bottom: 55px;
     left: 50%;
     transform: translateX(-50%);
     z-index: 1;
+    width:  300px;
 
     @media (min-width: 320px){
-        bottom: -107px;
+        top: 480px;
+    }
+
+    @media (min-width: 375px){
+        // top: 43px;
     }
 
     @media (min-width: 600px){
-        bottom: 65px;
+        top: 500px
     }
+
+    @media (min-width: 1150px){
+        top: 550px;
+    }
+}
+
+.setaWelcomeShowroom{
+    height: 300px;
 }
 
 ////////////////////////////////
@@ -681,8 +731,17 @@ section.AboutUs{
     
         @media (min-width: 600px){
            flex-direction: row;
-           padding: unset;
+           padding: 0px 20px;
            gap: 100px;
+        }
+
+        &.flex{
+            @media (min-width: 320px){
+                align-items: center;
+            }
+            @media (min-width: 1150px){
+                align-items: unset;
+            }
         }
     }
     .setaDireita{
@@ -703,7 +762,7 @@ section.AboutUs{
     
 
 
-        @media (min-width: 600px){
+        @media (min-width: 720px){
            display: block;
         }
     }

@@ -15,7 +15,10 @@ function Banner(){
                 </div>
             </section>
             <a href="/showroom"><button className="buttonDefault viewShowroom">VIEW SHOWROOM</button></a>
-            <img alt="" src="img/sfx/setaWelcomeShowroom.png" className="setaWelcomeShowroom" />
+            <div className="divSetaWelcomeShowroom">
+                <img alt="" src="img/sfx/setaWelcomeShowroom.png" className="setaWelcomeShowroom" />
+            </div>
+            
         </>
     )
 }

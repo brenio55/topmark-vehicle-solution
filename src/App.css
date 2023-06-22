@@ -464,9 +464,16 @@ section.blackFrame .titles .marks {
 @media (min-width: 320px) {
   section.blackFrame .titles .marks {
     flex-wrap: wrap;
-    scale: 0.9;
+    scale: 0.87;
     justify-content: center;
     align-items: center;
+    gap: 16px;
+  }
+}
+@media (min-width: 600px) {
+  section.blackFrame .titles .marks {
+    gap: 20px;
+    scale: 0.9;
   }
 }
 @media (min-width: 1150px) {
@@ -506,7 +513,7 @@ button.viewShowroom {
 }
 @media (min-width: 1920px) {
   button.viewShowroom {
-    top: 60%;
+    top: 69%;
   }
 }
 @media (min-width: 1920px) and (min-height: 960px) {
@@ -670,6 +677,12 @@ section.AboutUs .content {
 section.AboutUs .content .L, section.AboutUs .content .R {
   width: 500px;
 }
+section.AboutUs .content .R {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: center;
+}
 section.AboutUs .content .aboutUsImg {
   width: 503px;
   border-radius: 15px;
@@ -736,6 +749,16 @@ section.contactUs {
   background-color: rgba(74, 14, 72, 0.72);
   padding-top: 70px;
 }
+@media (min-width: 320px) {
+  section.contactUs {
+    min-height: 354px;
+  }
+}
+@media (min-width: 600px) {
+  section.contactUs {
+    min-height: 444px;
+  }
+}
 section.contactUs h2.titleDefault {
   margin-top: 0;
 }
@@ -754,7 +777,7 @@ section.contactUs h2.titleDefault::before {
 }
 @media (min-width: 320px) {
   section.contactUs h3 {
-    font-size: 15px;
+    font-size: 13px;
     word-break: break-all;
   }
 }
@@ -790,7 +813,7 @@ section.contactUs .flex {
 }
 @media (min-width: 320px) {
   section.contactUs .flex {
-    gap: 5px;
+    gap: 8px;
     padding: 0px 41px;
   }
 }

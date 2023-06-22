@@ -1,4 +1,33 @@
+import { useEffect, useState } from "react";
+
 function Contact(){
+    const [iconPhone, setIconPhone] = useState();
+    const [iconMap, setIconMap] = useState();
+    const [iconEmail, setIconEmail] = useState();
+
+    // useEffect(() => {
+    //     const updateWindowDimensions = () => {
+    //       const newWidth = window.innerWidth;
+    //       setWidth(newWidth);
+    //       console.log('updating width');
+    //     };
+      
+    //     window.addEventListener("resize", updateWindowDimensions);
+    //     return () => {
+    //       window.removeEventListener("resize", updateWindowDimensions);
+    //     };
+    //   }, []);
+      
+    //   useEffect(() => {
+    //     if ((width >= 320) && (width < 600)) {
+    //       setCarPerPage(1);
+    //     } else if ((width >= 600) && (width < 1150)) {
+    //       setCarPerPage(3);
+    //     } else if ((width >= 1150) && (width < 1368)) {
+    //       setCarPerPage(4);
+    //     }
+    //   }, [width]);
+
     return (
         <>
             <section className="contactUs">

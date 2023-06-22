@@ -65,7 +65,7 @@ function Working(){
                 <h1 style={{marginBottom: 0}}>We're developing this section!</h1>
             </div>
             <div className="textosFlex">
-                <p>We're currently developing this section and it'll be available soon! Click the button to come back to the home page.</p>
+                <p>This section is currently being developed and it'll be available soon with all our cars' stock. <br/><br/>Click the button bellow to come back to the home page.</p>
             </div>
 
             <div className="imgFlex"><img src="img/sfx/crane.gif" alt="" /></div>

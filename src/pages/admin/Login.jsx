@@ -1,33 +1,37 @@
-import { useState } from "react"
+import { useContext, useState } from "react"
 import { useNavigate } from 'react-router-dom';
+
 import axios from 'axios';
 import Header from "../../components/Header";
 
 import logo from '/img/logo/logoNoBackgroundBlack.png';
 
 const initSession = import.meta.env.VITE_APISRC
-console.log(initSession)
-
-function loginIniciado(){
-    
-}
+// console.log(initSession)
 
 function Login(){
     const navigate = useNavigate(); // <-- get history from hook
     let Acesso = Int16Array
 
     function requestLoginAPI(event){
-        event.preventDefault()
+        console.log('Login Requisitado')
+        event.preventDefault() // previne o comportamento padrão do Form de encaminhar para outro arquivo reescrevendo a página
 
         axios.defaults.headers.post['Content-Type'] = 'application/json';
-        axios.post(initSession, {user: user, password: password})
-        .then(response => {
-            console.log(response.data)
+        axios.post(initSession, {user: user, password: password}) //initSession -> api source //user e password --> banco de dados e UseState
+        .then(response =>                                   
+            {                                       
+            console.log(response.data);
 
-            if(response.data["acesso"]=='concedido'){
+            if(response.data["acesso"]=='concedido'){                
                 Acesso = 1
+                console.log('1 > ' + event.target[0].value);
+                console.log('2 > ' + event.target[1].value);                
+
                 navigate("/dashboard");                
             }else{
+                console.log('1 > ' + event.target[0].value);
+                console.log('2 > ' + event.target[1].value);
                 Acesso = 0
             }
 
@@ -59,7 +63,6 @@ function Login(){
                             <input type="password"  name="password" value={password} onChange={(e)=>{setPassword(e.target.value) }} />
                             <br />
                             <button type="submit">Enviar</button>
-                            
                         </form>
                     </div>
                 </div>

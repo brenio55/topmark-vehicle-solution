@@ -922,17 +922,30 @@ section.dashboard aside {
   position: absolute;
   left: 0;
 }
+section.dashboard .posts {
+  color: black;
+  text-align: center;
+}
 section.dashboard div.dashboardActions {
+  background-color: grey;
+  color: black;
   display: flex;
-  justify-content: center;
-  gap: 80px;
+  justify-content: start;
+  gap: 19px;
+  /* width: 800px; */
+  margin: 0px 160px;
+  font-size: 12px;
 }
 section.dashboard div.dashboardActions article.dashboardAction {
   display: flex;
   background-color: wheat;
-  height: 250px;
-  width: 380px;
+  height: 65px;
+  width: 180px;
   justify-content: center;
   align-items: center;
+  margin: 5px;
   color: #02112D;
+}
+section.dashboard div.dashboardActions article.dashboardAction.createPost {
+  cursor: pointer;
 }

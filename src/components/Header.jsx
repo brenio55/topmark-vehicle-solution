@@ -1,15 +1,22 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import logo from '/img/logo/logoNoBackground.png';
+import Login from '../pages/admin/Login';
 
-function Header({onLandingPage}){
+function Header({onLandingPage, onAdmin}){
     // const logo = "./src/img/logo/logoNoBackground.png";
+
+    // Login.Login()
 
     let whereSymbol = onLandingPage ? '#' : '/#';
     function verifyLogin(){
-        let login = false
+        let login = onAdmin ? 'admin' : false;
 
         if (login){
-
+            return (
+            <>
+                <p>User: {login}</p>
+            </>
+            )
         }else{
             let loginImg = 'img/sfx/login.png';
 

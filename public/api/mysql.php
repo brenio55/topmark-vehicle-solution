@@ -1,9 +1,9 @@
 <?php
 // Database connection parameters
 $servername = "localhost";
-$username = "your_username";
-$password = "your_password";
-$dbname = "topmarks";
+$username = "root";
+$password = "";
+$dbname = "topmarkvs";
 
 try {
     // Create a PDO connection
@@ -24,8 +24,8 @@ try {
 
     // Create the "users" table
     $sql = "CREATE TABLE IF NOT EXISTS users (
-      id INT(9) PRIMARY KEY,
-      usuario VARCHAR(50),
+      id INT(11) PRIMARY KEY,
+      usuario VARCHAR(255),
       tipoUsuario VARCHAR(15),
       senha VARCHAR(120),
       dataRegistro TIMESTAMP(6) DEFAULT CURRENT_TIMESTAMP(6),
@@ -44,7 +44,6 @@ try {
       idPostBy INT(11),
       nameCar VARCHAR(255),
       price INT(11),
-      FOREIGN KEY (postBy) REFERENCES users(usuario),
       FOREIGN KEY (idPostBy) REFERENCES users(id)
     )";
     $conn->exec($sql);

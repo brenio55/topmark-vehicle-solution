@@ -14,7 +14,7 @@ img {
 }
 
 html {
-  background-color: #02112D;
+  background-color: #02112d;
   color: white;
   scroll-behavior: smooth;
 }
@@ -99,7 +99,11 @@ header {
 }
 @media (min-width: 1150px) {
   header {
-    background: linear-gradient(180deg, rgba(6, 7, 20, 0.72) 0%, rgba(21, 23, 70, 0) 112.5%);
+    background: linear-gradient(
+      180deg,
+      rgba(6, 7, 20, 0.72) 0%,
+      rgba(21, 23, 70, 0) 112.5%
+    );
     flex-direction: row;
   }
 }
@@ -234,7 +238,7 @@ footer {
   justify-content: space-evenly;
   height: 180px;
   color: white;
-  background: #02112D;
+  background: #02112d;
   align-items: center;
   z-index: 2;
   margin: 0;
@@ -281,7 +285,7 @@ button.buttonDefault {
   line-height: 29px;
   /* identical to box height */
   text-align: center;
-  color: #CCCCCC;
+  color: #cccccc;
   padding: 8px 15px;
   transition: all 0.3s;
 }
@@ -321,7 +325,11 @@ button.buttonDefault:hover {
   content: "";
   height: 34px;
   position: absolute;
-  background: radial-gradient(50% 50% at 50% 50%, rgba(26, 82, 166, 0.76) 0%, rgba(109, 7, 81, 0) 100%);
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(26, 82, 166, 0.76) 0%,
+    rgba(109, 7, 81, 0) 100%
+  );
   transform: translate(-50%, -50%);
   top: 50%;
   left: 50%;
@@ -391,7 +399,13 @@ section.blackFrame h1 {
     filter: brightness(1);
     position: absolute;
     font-size: 25px;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.37) 28.13%, rgba(0, 0, 0, 0.65) 72.92%, rgba(0, 0, 0, 0) 100%);
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.37) 28.13%,
+      rgba(0, 0, 0, 0.65) 72.92%,
+      rgba(0, 0, 0, 0) 100%
+    );
     mix-blend-mode: normal;
     top: 50%;
     transform: translateY(-50%);
@@ -437,7 +451,7 @@ section.blackFrame .titles .welcomeLine {
   display: block;
   width: 2px;
   height: 216px;
-  background-color: #D9D9D9;
+  background-color: #d9d9d9;
   position: absolute;
 }
 @media (min-width: 320px) {
@@ -569,10 +583,15 @@ button.viewShowroom {
 section.currentStockDIV {
   position: relative;
   min-height: 870px;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.08) 0%, rgba(0, 0, 0, 0) 60.42%, rgba(105, 156, 232, 0.02) 94.27%);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.08) 0%,
+    rgba(0, 0, 0, 0) 60.42%,
+    rgba(105, 156, 232, 0.02) 94.27%
+  );
   background-blend-mode: exclusion;
   -webkit-backdrop-filter: blur(80px);
-          backdrop-filter: blur(80px);
+  backdrop-filter: blur(80px);
   overflow: clip;
   padding-top: 130px;
 }
@@ -634,7 +653,7 @@ section.currentStockDIV .carSquare .carImg {
   width: 500px;
   height: 268px;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 section.currentStockDIV .exploreMore {
   position: absolute;
@@ -666,7 +685,11 @@ section.AboutUs .titleDefault {
   margin-bottom: 96px;
 }
 section.AboutUs .titleDefault::before {
-  background: radial-gradient(50% 50% at 50% 50%, #6D0751 0%, rgba(109, 7, 81, 0) 100%);
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    #6d0751 0%,
+    rgba(109, 7, 81, 0) 100%
+  );
   z-index: -1;
 }
 section.AboutUs .content {
@@ -674,7 +697,8 @@ section.AboutUs .content {
   justify-content: center;
   gap: 100px;
 }
-section.AboutUs .content .L, section.AboutUs .content .R {
+section.AboutUs .content .L,
+section.AboutUs .content .R {
   width: 500px;
 }
 section.AboutUs .content .R {
@@ -786,7 +810,9 @@ section.contactUs h2.titleDefault::before {
     font-size: initial;
   }
 }
-section.contactUs .phoneIcon, section.contactUs .emailIcon, section.contactUs .addressIcon {
+section.contactUs .phoneIcon,
+section.contactUs .emailIcon,
+section.contactUs .addressIcon {
   height: 27px;
 }
 section.contactUs .emailIcon {
@@ -868,7 +894,7 @@ section.login .quadradoLogin .R {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: #474A59;
+  background-color: #474a59;
   color: #c2c2c5;
   min-height: 260px;
   box-shadow: 0px 0px 40px 16px rgba(0, 0, 0, 0.22);
@@ -951,7 +977,7 @@ section.dashboard div.dashboardActions article.dashboardAction {
   justify-content: center;
   align-items: center;
   margin: 5px;
-  color: #02112D;
+  color: #02112d;
 }
 section.dashboard div.dashboardActions article.dashboardAction.createPost {
   cursor: pointer;

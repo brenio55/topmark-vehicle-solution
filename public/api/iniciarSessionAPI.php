@@ -1,43 +1,53 @@
-<?php 
-    header('Access-Control-Allow-Origin: *');
-    header("Access-Control-Allow-Credentials: true");
-    header("Access-Control-Allow-Methods: GET,HEAD,OPTIONS,POST,PUT");
-    header("Access-Control-Allow-Headers: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers");
-    header('Content-Type: application/json; charset=UTF-8');
+<?php
+header('Access-Control-Allow-Origin: *');
+header("Access-Control-Allow-Credentials: true");
+header("Access-Control-Allow-Methods: GET,HEAD,OPTIONS,POST,PUT");
+header("Access-Control-Allow-Headers: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers");
+header('Content-Type: application/json; charset=UTF-8');
+$method = $_SERVER['REQUEST_METHOD'];
 
-    require_once('global.php');
+if ($method == "OPTIONS") {
+  header('Access-Control-Allow-Origin: *');
+  header("Access-Control-Allow-Headers: X-API-KEY, Origin, X-Requested-With, Content-Type, Accept, Access-Control-Request-Method,Access-Control-Request-Headers, Authorization");
+  header("HTTP/1.1 200 OK");
+  die();
+}
 
-    $data = json_decode(file_get_contents("php://input"), true);
+require_once('global.php');
 
-    $user = $data["user"];
-    $password = $data["password"];
-    // var_dump($_POST);
+$data = json_decode(file_get_contents("php://input"), true);
 
-    // var_dump($_ENV);
-    $dbhost = $_ENV["dbhost"];
-    $dbname = $_ENV["dbname"];
+$user = $data["user"];
+$password = $data["password"];
+// var_dump($_POST);
 
-    $conn = new PDO('mysql:dbname='.$dbname.';host='.$dbhost, $_ENV["dbuser"], $_ENV["dbpassword"]);
-    //    $conn = new PDO("mysql:dbname=topmarkvs;host=localhost", "root", "");
+// var_dump($_ENV);
+$dbhost = $_ENV["dbhost"];
+$dbname = $_ENV["dbname"];
 
-    $query = $conn->prepare("SELECT * FROM users WHERE usuario=:usuario AND senha=:senha");
-    $query->bindParam(':usuario', $user);
-    $query->bindParam(':senha', $password);
-    $query->execute();
+$conn = new PDO('mysql:dbname=' . $dbname . ';host=' . $dbhost, $_ENV["dbuser"], $_ENV["dbpassword"]);
+//    $conn = new PDO("mysql:dbname=topmarkvs;host=localhost", "root", "");
 
-    $result = $query->fetchAll(PDO::FETCH_ASSOC);
+$query = $conn->prepare("SELECT * FROM users WHERE usuario=:usuario AND senha=:senha");
+$query->bindParam(':usuario', $user);
+$query->bindParam(':senha', $password);
+$query->execute();
 
-    http_response_code(200);
-        
-    if ($result){
-        echo json_encode(array(
-            'acesso'=>'concedido'
-        ));
-    }else{
-        echo json_encode(array(
-            'acesso'=>'negado'
-        ));
-    }
+$result = $query->fetchAll(PDO::FETCH_ASSOC);
 
+http_response_code(200);
 
+if ($result) {
+    echo json_encode(
+        array(
+            'acesso' => 'concedido'
+        )
+    );
+} else {
+    echo json_encode(
+        array(
+            'acesso' => 'negado'
+        )
+    );
+}
 ?>

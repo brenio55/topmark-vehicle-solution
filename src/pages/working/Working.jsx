@@ -1,9 +1,8 @@
-function Working(){
-    return (
-        <>
-        <style>
-        {
-            `@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');   
+function Working() {
+  return (
+    <>
+      <style>
+        {`@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');   
 
             img{
                 width: 250px;
@@ -57,25 +56,33 @@ function Working(){
                 padding: 0px 20px 0px 20px;
                 width: 300px;
                 text-align: center;
-            }`
-        }
-    </style>
+            }`}
+      </style>
 
-            <div className="textosFlex">
-                <h1 style={{marginBottom: 0}}>We're developing this section!</h1>
-            </div>
-            <div className="textosFlex">
-                <p>This section is currently being developed and it'll be available soon with all our cars' stock. <br/><br/>Click the button bellow to come back to the home page.</p>
-            </div>
+      <div className="textosFlex">
+        <h1 style={{ marginBottom: 0 }}>We're developing this section!</h1>
+      </div>
+      <div className="textosFlex">
+        <p>
+          This section is currently being developed and it'll be available soon
+          with all our cars' stock. <br />
+          <br />
+          Click the button bellow to come back to the home page.
+        </p>
+      </div>
 
-            <div className="imgFlex"><img src="img/sfx/crane.gif" alt="" /></div>
-            <div className="botaoFlex">
-                <a href="../index.html" style={{textDecoration: null}}>
-                    <a href="/"><button>Homepage</button></a>
-                </a>
-            </div>
-        </>
-    )
+      <div className="imgFlex">
+        <img src="img/sfx/crane.gif" alt="" />
+      </div>
+      <div className="botaoFlex">
+        <a href="../index.html" style={{ textDecoration: null }}>
+          <a href="/">
+            <button>Homepage</button>
+          </a>
+        </a>
+      </div>
+    </>
+  );
 }
 
-export default Working
+export default Working;
